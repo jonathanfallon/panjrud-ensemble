@@ -24,7 +24,7 @@ const { title, description, heroImage } = concert.data;
 		},
 	]}
 >
-	<a href={`/concerts/${concert.id}`} class="aspect-square overflow-hidden">
+	<a href={`${import.meta.env.BASE_URL}/concerts/${concert.id}`} class="aspect-square overflow-hidden">
 		{
 			noTransitions && (
 				<Image
@@ -51,7 +51,7 @@ const { title, description, heroImage } = concert.data;
 	</a>
 	<div class="flex flex-col justify-between gap-2">
 		<div>
-			<h3 class="h3 text-primary-500 tracking-widest">{title}</h3>
+			<h3 class="h3 text-primary-300 tracking-widest">{title}</h3>
 			<p class="mt-4 lg:text-lg">{description}</p>
 		</div>
 		<div class="flex">

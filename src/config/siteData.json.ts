@@ -7,6 +7,9 @@ export interface SiteDataProps {
 		name: string;
 		email: string;
 		twitter: string; // used for twitter cards when sharing a blog post on twitter
+		facebook?: string;
+		instagram?: string;
+		youtube?: string;
 	};
 	defaultImage: {
 		src: string;
@@ -23,9 +26,12 @@ const siteData: SiteDataProps = {
 	useViewTransitions: true,
 	// Your information!
 	author: {
-		name: "Cosmic Themes",
-		email: "creator@cosmicthemes.com",
-		twitter: "Cosmic_Themes",
+		name: "Panjrud Ensemble",
+		email: "no-reply@example.com",
+		twitter: "",
+		facebook: "",
+		instagram: "https://www.instagram.com/panjrud_ensemble",
+		youtube: "https://www.youtube.com/@PanjrudEnsemble",
 	},
 
 	// default image for meta tags if the page doesn't have an image already

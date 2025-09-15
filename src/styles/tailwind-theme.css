@@ -5,40 +5,40 @@
  */
 @theme {
 	/* primary colors */
-	--color-primary-50: oklch(97.46% 0.0051 67.76);
-	--color-primary-100: oklch(94.4% 0.0115 84.58);
-	--color-primary-200: oklch(88.03% 0.0219 76.52);
-	--color-primary-300: oklch(80.1% 0.0376 73.97);
-	--color-primary-400: oklch(72.27% 0.0493 66.91);
-	--color-primary-500: oklch(64.12% 0.0623 60.4);
-	--color-primary-600: oklch(59.23% 0.0631 54.17);
-	--color-primary-700: oklch(51.67% 0.0543 49.61);
-	--color-primary-800: oklch(45.03% 0.0426 44.25);
-	--color-primary-900: oklch(39.63% 0.0349 45.6);
-	--color-primary-950: oklch(26.18% 0.0222 42.02);
+	--color-primary-50: oklch(0.350 0.142 27.0);
+	--color-primary-100: oklch(0.410 0.166 27.0);
+	--color-primary-200: oklch(0.470 0.190 27.0);
+	--color-primary-300: oklch(0.530 0.214 27.0);
+	--color-primary-400: oklch(0.590 0.239 27.0);
+	--color-primary-500: oklch(0.650 0.262 27.0);
+	--color-primary-600: oklch(0.710 0.205 27.0);
+	--color-primary-700: oklch(0.770 0.153 27.0);
+	--color-primary-800: oklch(0.830 0.107 27.0);
+	--color-primary-900: oklch(0.890 0.066 27.0);
+	--color-primary-950: oklch(0.950 0.029 27.0);
 
 	/* base colors */
-	--color-base-50: oklch(97.31% 0 0);
-	--color-base-100: oklch(92.8% 0 0);
-	--color-base-200: oklch(86.07% 0 0);
-	--color-base-300: oklch(75.72% 0 0);
-	--color-base-400: oklch(62.68% 0 0);
-	--color-base-500: oklch(53.48% 0 0);
-	--color-base-600: oklch(47.84% 0 0);
-	--color-base-700: oklch(42.76% 0 0);
-	--color-base-800: oklch(39.04% 0 0);
-	--color-base-900: oklch(33.29% 0 0);
-	--color-base-950: oklch(26.86% 0 0);
+	--color-base-50: oklch(2.69% 0 0);
+	--color-base-100: oklch(7.2% 0 0);
+	--color-base-200: oklch(13.93% 0 0);
+	--color-base-300: oklch(24.28% 0 0);
+	--color-base-400: oklch(37.32% 0 0);
+	--color-base-500: oklch(46.52% 0 0);
+	--color-base-600: oklch(52.16% 0 0);
+	--color-base-700: oklch(57.24% 0 0);
+	--color-base-800: oklch(60.96% 0 0);
+	--color-base-900: oklch(66.71% 0 0);
+	--color-base-950: oklch(73.14% 0 0);
 
 	/* other colors */
-	--color-info: var(--color-sky-300);
-	--color-info-foreground: var(--color-sky-950);
-	--color-success: var(--color-green-300);
-	--color-success-foreground: var(--color-green-950);
-	--color-warning: var(--color-amber-300);
-	--color-warning-foreground: var(--color-amber-950);
-	--color-error: var(--color-red-700);
-	--color-error-foreground: var(--color-base-50);
+	--color-info: var(--color-sky-700);
+	--color-info-foreground: var(--color-sky-50);
+	--color-success: var(--color-green-700);
+	--color-success-foreground: var(--color-green-50);
+	--color-warning: var(--color-amber-700);
+	--color-warning-foreground: var(--color-amber-50);
+	--color-error: var(--color-red-300);
+	--color-error-foreground: var(--color-base-950);
 
 	/* layout settings */
 	--breakpoint-xs: 400px;
@@ -53,8 +53,8 @@
 		"-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif",
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-sans: "Work Sans Variable", var(--font-fallback);
-	--font-heading-1: "Alexandria Variable", var(--font-serif);
+	--font-heading-1: "Playfair Display Variable", var(--font-serif);
 	--font-heading-2: "Raleway Variable", var(--font-fallback);
-	--font-decorative: "Cinzel Decorative", "Alexandria Variable", var(--font-serif);
+	--font-decorative: "Cinzel Decorative", "Playfair Display Variable", var(--font-serif);
 	--font-mono: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
 }

@@ -18,44 +18,36 @@ const today = new Date();
 				<SiteLogo />
 			</div>
 			<div class="col-span-2 flex justify-end gap-4">
-				<FooterLink href={import.meta.env.BASE_URL}>Home</FooterLink>
-				<FooterLink href={import.meta.env.BASE_URL + "/#portfolio"}>Portfolio</FooterLink>
+				<FooterLink href={import.meta.env.BASE_URL + "/concerts"}>Concerts</FooterLink>
 			</div>
 			<div class="hidden justify-center text-center md:flex">
 				<SiteLogo />
 			</div>
 			<div class="flex gap-4 md:col-span-2">
-				<FooterLink href={import.meta.env.BASE_URL + "/#pricing"}>Pricing</FooterLink>
 				<FooterLink href={import.meta.env.BASE_URL + "/#contact"}>Contact</FooterLink>
 			</div>
 		</div>
 
-		<!-- lets connect -->
-		<div class="description mx-auto mt-6 max-w-[21rem] px-4 text-center">
-			<p>
-				<span class="italic">Lets connect!</span> Follow my accounts to view more wedding photography
-				and get inspired for your wedding.
-			</p>
-		</div>
-
 		<!-- socials -->
-		<div class="text-primary-500 mt-8 flex justify-center gap-4">
-			<a href="#" target="_blank" rel="noopener noreferrer">
-				<Icon name="socials/mdi-facebook" class="size-6 transition hover:opacity-80" />
-				<span class="sr-only">Facebook</span>
-			</a>
-			<a href="#" target="_blank" rel="noopener noreferrer">
-				<Icon name="socials/mdi-twitter" class="size-6 transition hover:opacity-80" />
-				<span class="sr-only">Twitter</span>
-			</a>
-			<a href="#" target="_blank" rel="noopener noreferrer">
-				<Icon name="socials/mdi-youtube" class="size-6 transition hover:opacity-80" />
-				<span class="sr-only">Youtube</span>
-			</a>
-			<a href="#" target="_blank" rel="noopener noreferrer">
-				<Icon name="socials/basil-instagram-solid" class="size-6 transition hover:opacity-80" />
-				<span class="sr-only">Instagram</span>
-			</a>
+		<div class="text-primary-100 mt-8 flex justify-center gap-4">
+			{siteData.author?.facebook && (
+				<a href={siteData.author.facebook} target="_blank" rel="noopener noreferrer">
+					<Icon name="socials/mdi-facebook" class="size-6 transition hover:opacity-80" />
+					<span class="sr-only">Facebook</span>
+				</a>
+			)}
+			{siteData.author?.youtube && (
+				<a href={siteData.author.youtube} target="_blank" rel="noopener noreferrer">
+					<Icon name="socials/mdi-youtube" class="size-6 transition hover:opacity-80" />
+					<span class="sr-only">Youtube</span>
+				</a>
+			)}
+			{siteData.author?.instagram && (
+				<a href={siteData.author.instagram} target="_blank" rel="noopener noreferrer">
+					<Icon name="socials/basil-instagram-solid" class="size-6 transition hover:opacity-80" />
+					<span class="sr-only">Instagram</span>
+				</a>
+			)}
 		</div>
 
 		<!-- copyright -->
