@@ -5,6 +5,7 @@
  */
 
 import Button from "@components/Button/Button.astro";
+import siteData from "@config/siteData.json";
 import heroImage from "@images/hero-bg-min.jpg";
 import heroImageMobile from "@images/hero-bg-min.jpg";
 import { Image } from "astro:assets";
@@ -38,15 +39,14 @@ import { Image } from "astro:assets";
 		<!-- Hero text -->
 		<div class="text-base-50 my-auto mr-auto max-w-[800px] flex-col">
 			<h1
-				class="font-heading-1 text-4xl font-semibold text-pretty drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)] md:text-7xl md:leading-tight"
+				class="font-heading-1 text-4xl uppercase font-semibold text-pretty drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)] md:text-7xl md:leading-tight"
 			>
-				California Wedding Photography
+				{siteData.name}
 			</h1>
 			<p
 				class="mt-8 text-lg tracking-widest text-pretty drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:max-w-[550px] md:text-2xl"
 			>
-				Transform your wedding moments into lasting memories amidst California's majestic
-				landscapes.
+				{siteData.description}
 			</p>
 			<div class="mt-10 flex flex-wrap justify-center gap-4 md:justify-start">
 				<Button
@@ -55,7 +55,7 @@ import { Image } from "astro:assets";
 					href="/#contact"
 					class="pl-0 text-xl text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:text-3xl"
 				>
-					Get a Quote
+					Discover
 				</Button>
 			</div>
 		</div>

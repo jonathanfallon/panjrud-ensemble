@@ -7,13 +7,13 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-	portfolio: CollectionEntry<"portfolios">;
+	concert: CollectionEntry<"concerts">;
 	direction: "horizontal" | "vertical";
 	noTransitions?: boolean;
 }
 
-const { portfolio, direction, noTransitions = false } = Astro.props as Props;
-const { title, description, heroImage } = portfolio.data;
+const { concert, direction, noTransitions = false } = Astro.props as Props;
+const { title, description, heroImage } = concert.data;
 ---
 
 <div
@@ -24,7 +24,7 @@ const { title, description, heroImage } = portfolio.data;
 		},
 	]}
 >
-	<a href={`/portfolio/${portfolio.id}`} class="aspect-square overflow-hidden">
+	<a href={`/concerts/${concert.id}`} class="aspect-square overflow-hidden">
 		{
 			noTransitions && (
 				<Image
@@ -44,7 +44,7 @@ const { title, description, heroImage } = portfolio.data;
 					width={450}
 					densities={[1.5, 2, 3]}
 					class="h-auto min-h-full w-full min-w-full object-cover"
-					transition:name={`portfolio-image-${portfolio.id}`}
+					transition:name={`portfolio-image-${concert.id}`}
 				/>
 			)
 		}
@@ -55,7 +55,7 @@ const { title, description, heroImage } = portfolio.data;
 			<p class="mt-4 lg:text-lg">{description}</p>
 		</div>
 		<div class="flex">
-			<Button variant="ghost" arrow="right" href={`/portfolio/${portfolio.id}`} class="pl-0">
+			<Button variant="ghost" arrow="right" href={`/concerts/${concert.id}`} class="pl-0">
 				View More
 			</Button>
 		</div>

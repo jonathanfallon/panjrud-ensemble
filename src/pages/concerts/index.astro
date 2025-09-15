@@ -7,7 +7,7 @@ import TestimonialQuote from "@components/Testimonials/TestimonialQuote.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection, render } from "astro:content";
 
-const portfolios = await getCollection("portfolios", ({ data }) => {
+const concerts = await getCollection("concerts", ({ data }) => {
 	// filter out draft pages
 	return data.draft !== true;
 });
@@ -20,10 +20,10 @@ const portfolios = await getCollection("portfolios", ({ data }) => {
 				The moments you'll want to relive in a timeless, romantic, and artistic style.
 			</h1>
 		</div>
-		<PortfolioGrid portfolios={portfolios} />
+		<PortfolioGrid concerts={concerts} />
 	</div>
 
 	<TestimonialQuote />
 
-	<Contact class="mt-12" />
+	<!-- <Contact class="mt-12" /> -->
 </BaseLayout>

@@ -5,22 +5,22 @@ import { type InferGetStaticPropsType } from "astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
-	const portfolios = await getCollection("portfolios", ({ data }) => {
+	const concerts = await getCollection("concerts", ({ data }) => {
 		// filter out draft pages
 		return data.draft !== true;
 	});
 
-	return portfolios.map((portfolio) => ({
-		params: { slug: portfolio.id },
-		props: portfolio,
+	return concerts.map((concert) => ({
+		params: { slug: concert.id },
+		props: concert,
 	}));
 }
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const portfolio = Astro.props as Props;
-const { Content } = await render(portfolio);
+const concert = Astro.props as Props;
+const { Content } = await render(concert);
 ---
 
-<PortfolioLayout portfolio={portfolio}>
+<PortfolioLayout concert={concert}>
 	<Content />
 </PortfolioLayout>

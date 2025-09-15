@@ -3,11 +3,11 @@ import { defineCollection, reference, z } from "astro:content";
 
 // Type-check frontmatter using a schema
 // portfolios
-const portfolios = defineCollection({
+const concerts = defineCollection({
 	// type: "content",
 	loader: glob({
 		pattern: "**/[^_]*.{md,mdx}",
-		base: "./src/data/portfolios",
+		base: "./src/data/concerts",
 	}),
 	schema: ({ image }) =>
 		z.object({
@@ -63,7 +63,7 @@ const otherPages = defineCollection({
 });
 
 export const collections = {
-	portfolios,
+	concerts,
 	testimonials,
 	otherPages,
 };

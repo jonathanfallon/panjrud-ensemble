@@ -9,18 +9,18 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
-	portfolio: CollectionEntry<"portfolios">;
+	concert: CollectionEntry<"concerts">;
 }
 
 import headerImage from "@images/portfolio-header-crop-min.jpg";
 
-const { portfolio } = Astro.props as Props;
-const { title, description, date, images, clients, location, heroImage } = portfolio.data;
+const { concert } = Astro.props as Props;
+const { title, description, date, images, clients, location, heroImage } = concert.data;
 
 // find other portfolios to show later down the page
-const otherPortfolios = await getCollection("portfolios", (otherPortfolio) => {
+const otherConcerts = await getCollection("concerts", (otherConcert) => {
 	// filter out draft pages
-	return otherPortfolio.data.draft !== true && otherPortfolio.id !== portfolio.id;
+	return otherConcert.data.draft !== true && otherConcert.id !== concert.id;
 });
 ---
 
@@ -65,7 +65,7 @@ const otherPortfolios = await getCollection("portfolios", (otherPortfolio) => {
 				quality="high"
 				densities={[1.5, 2]}
 				class="h-auto min-h-full w-full min-w-full object-cover"
-				transition:name={`portfolio-image-${portfolio.id}`}
+				transition:name={`portfolio-image-${concert.id}`}
 			/>
 		</div>
 
@@ -112,8 +112,8 @@ const otherPortfolios = await getCollection("portfolios", (otherPortfolio) => {
 	<TestimonialQuote />
 
 	<section class="mx-auto mt-12 px-4 md:mt-16 md:max-w-5xl">
-		<h3 class="h2 text-center">More Portfolios</h3>
-		<PortfolioGrid portfolios={otherPortfolios} noTransitions />
+		<h3 class="h2 text-center">More Concerts</h3>
+		<PortfolioGrid concerts={otherConcerts} noTransitions />
 	</section>
-	<Contact class="mt-12" />
+	<!-- <Contact class="mt-12" /> -->
 </BaseLayout>

@@ -53,9 +53,8 @@
 		"-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif",
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--font-sans: "Work Sans Variable", var(--font-fallback);
-	--font-heading-1: "Playfair Display Variable", var(--font-serif);
+	--font-heading-1: "Alexandria Variable", var(--font-serif);
 	--font-heading-2: "Raleway Variable", var(--font-fallback);
-	--font-decorative: "Cinzel Decorative", "Playfair Display Variable", var(--font-serif);
-	--font-mono:
-		"SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
+	--font-decorative: "Cinzel Decorative", "Alexandria Variable", var(--font-serif);
+	--font-mono: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
 }
