@@ -2,6 +2,7 @@
 	"name": "horizon",
 	"type": "module",
 	"version": "2.1.0",
+	"packageManager": "pnpm@10.16.1",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
