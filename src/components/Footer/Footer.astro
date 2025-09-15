@@ -18,15 +18,15 @@ const today = new Date();
 				<SiteLogo />
 			</div>
 			<div class="col-span-2 flex justify-end gap-4">
-				<FooterLink href="/">Home</FooterLink>
-				<FooterLink href="/#portfolio">Portfolio</FooterLink>
+				<FooterLink href={import.meta.env.BASE_URL}>Home</FooterLink>
+				<FooterLink href={import.meta.env.BASE_URL + "/#portfolio"}>Portfolio</FooterLink>
 			</div>
 			<div class="hidden justify-center text-center md:flex">
 				<SiteLogo />
 			</div>
 			<div class="flex gap-4 md:col-span-2">
-				<FooterLink href="/#pricing">Pricing</FooterLink>
-				<FooterLink href="/#contact">Contact</FooterLink>
+				<FooterLink href={import.meta.env.BASE_URL + "/#pricing"}>Pricing</FooterLink>
+				<FooterLink href={import.meta.env.BASE_URL + "/#contact"}>Contact</FooterLink>
 			</div>
 		</div>
 
@@ -40,19 +40,19 @@ const today = new Date();
 
 		<!-- socials -->
 		<div class="text-primary-500 mt-8 flex justify-center gap-4">
-			<a href="https://x.com/BowTiedWebReapr" target="_blank" rel="noopener noreferrer">
+			<a href="#" target="_blank" rel="noopener noreferrer">
 				<Icon name="socials/mdi-facebook" class="size-6 transition hover:opacity-80" />
 				<span class="sr-only">Facebook</span>
 			</a>
-			<a href="https://x.com/BowTiedWebReapr" target="_blank" rel="noopener noreferrer">
+			<a href="#" target="_blank" rel="noopener noreferrer">
 				<Icon name="socials/mdi-twitter" class="size-6 transition hover:opacity-80" />
 				<span class="sr-only">Twitter</span>
 			</a>
-			<a href="https://x.com/BowTiedWebReapr" target="_blank" rel="noopener noreferrer">
+			<a href="#" target="_blank" rel="noopener noreferrer">
 				<Icon name="socials/mdi-youtube" class="size-6 transition hover:opacity-80" />
 				<span class="sr-only">Youtube</span>
 			</a>
-			<a href="https://x.com/BowTiedWebReapr" target="_blank" rel="noopener noreferrer">
+			<a href="#" target="_blank" rel="noopener noreferrer">
 				<Icon name="socials/basil-instagram-solid" class="size-6 transition hover:opacity-80" />
 				<span class="sr-only">Instagram</span>
 			</a>

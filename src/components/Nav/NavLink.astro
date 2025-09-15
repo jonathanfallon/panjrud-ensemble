@@ -21,7 +21,7 @@ const { text, link, newTab = false } = navItem;
 				"": Astro.url.pathname === link,
 			},
 		]}
-		href={link}
+		href={import.meta.env.BASE_URL + link}
 		target={newTab ? "_blank" : ""}
 		rel={newTab ? "noopener noreferrer" : ""}
 	>

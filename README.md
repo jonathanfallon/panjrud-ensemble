@@ -2,7 +2,7 @@
 
 This is a free photography theme for Astro created by [Cosmic Themes](https://cosmicthemes.com/).
 
-[website demo](https://horizon.cosmicthemes.com/)
+[website demo](https://jonathanfallon.github.io/panjrud-ensemble/)
 
 ## Quickstart
 
