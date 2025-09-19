@@ -6,8 +6,8 @@
 
 import Button from "@components/Button/Button.astro";
 import siteData from "@config/siteData.json";
-import heroImage from "@images/hero-bg-min.jpg";
-import heroImageMobile from "@images/hero-bg-min.jpg";
+import heroImage from "@images/hero-bg-panjrud.jpg";
+import heroImageMobile from "@images/hero-bg-panjrud.jpg";
 import { Image } from "astro:assets";
 ---
 
@@ -37,18 +37,15 @@ import { Image } from "astro:assets";
 	<!-- hero items -->
 	<div class="site-container relative w-full gap-10 py-44 text-center md:py-52 md:text-left">
 		<!-- Hero text -->
-		<div class="text-white my-auto mr-auto max-w-[800px] flex-col">
-			<h1
-				class="font-heading-1 text-4xl uppercase font-semibold text-pretty drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)] md:text-7xl md:leading-tight"
-			>
+		<div class="text-white my-auto mx-auto max-w-[800px] flex flex-col items-center text-center">
+			<h1 class="font-heading-1 text-4xl uppercase font-light text-pretty tracking-widest md:text-7xl md:leading-tight" >
 				{siteData.name}
 			</h1>
-			<p
-				class="mt-8 text-lg tracking-widest text-pretty drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:max-w-[550px] md:text-2xl"
-			>
+			<hr class="mx-auto my-6 h-1 w-full rounded-full bg-white/80 md:my-8" aria-hidden="true" />
+			<p class="mt-6 text-lg tracking-widest text-pretty drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:max-w-[550px] md:text-2xl" >
 				{siteData.description}
 			</p>
-			<div class="mt-10 flex flex-wrap justify-center gap-4 md:justify-start">
+			<div class="mt-10 flex flex-wrap justify-center gap-4">
 				<Button
 					variant="ghost"
 					arrow="right"
