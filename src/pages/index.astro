@@ -8,19 +8,23 @@ import Hero from "@components/Hero/Hero.astro";
 import PortfolioThreeCards from "@components/Portfolio/PortfolioThreeCards.astro";
 import PricingThreeCards from "@components/Pricing/PricingThreeCards.astro";
 import Testimonials from "@components/Testimonials/Testimonials.astro";
+import Shows from "@components/Shows/Shows.astro";
 // data
 import siteData from "@config/siteData.json";
+import { getCollection, type CollectionEntry } from "astro:content";
 // layout
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
+
+const showsCollection = await getCollection("shows");
+// sort by date descending (newest first)
+const showsSorted = showsCollection.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
 <BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
 	<Hero />
-	<!-- <FeatureNumbers /> -->
-	<!-- <PortfolioThreeCards /> -->
-	<!-- <Testimonials /> -->
-	<!-- <PricingThreeCards /> -->
-	<!-- <About /> -->
-	<!-- <Contact /> -->
+	<section class="site-container" id="shows">
+		<h2 class="h3 mt-8 text-center">Shows</h2>
+		<Shows shows={showsSorted} />
+	</section>
 </BaseLayout>

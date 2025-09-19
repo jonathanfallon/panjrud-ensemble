@@ -19,7 +19,7 @@ import { Image } from "astro:assets";
 		<Image
 			src={heroImage}
 			class="hidden h-auto min-h-full w-full object-cover object-bottom sm:block"
-			alt="wedding"
+			alt={siteData.name}
 			aria-hidden="true"
 			loading="eager"
 			height={1400}
@@ -27,7 +27,7 @@ import { Image } from "astro:assets";
 		<Image
 			src={heroImageMobile}
 			class="h-auto min-h-full w-full object-cover sm:hidden"
-			alt="wedding"
+			alt={siteData.name}
 			aria-hidden="true"
 			loading="eager"
 			width={1200}
@@ -49,7 +49,7 @@ import { Image } from "astro:assets";
 				<Button
 					variant="ghost"
 					arrow="right"
-					href={`${import.meta.env.BASE_URL}/concerts`}
+					href={`${import.meta.env.BASE_URL}/#shows`}
 					class="pl-0 text-xl text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:text-3xl"
 				>
 					Discover

@@ -3,13 +3,13 @@ import PortfolioCard from "@components/PortfolioCard/PortfolioCard.astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 
 interface Props {
-	concerts: CollectionEntry<"concerts">[];
+	shows: CollectionEntry<"shows">[];
 	noTransitions?: boolean;
 }
 
-const { concerts, noTransitions = false } = Astro.props as Props;
+const { shows, noTransitions = false } = Astro.props as Props;
 ---
 
 <div class="grid gap-x-4 gap-y-10 pt-8 md:grid-cols-3 md:pt-12">
-	{concerts.map((concert) => <PortfolioCard concert={concert} direction="vertical" />)}
+	{shows.map((show) => <PortfolioCard show={show} direction="vertical" />)}
 </div>

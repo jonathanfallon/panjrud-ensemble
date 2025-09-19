@@ -13,7 +13,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 				Apologies, one of our links must have broken. Please try again or go back to the homepage.
 			</p>
 			<div class="mt-8 flex justify-center">
-				<Button variant="primary" href="/">Go to homepage</Button>
+				<Button variant="primary" href={import.meta.env.BASE_URL}>Go to homepage</Button>
 			</div>
 		</div>
 	</section>

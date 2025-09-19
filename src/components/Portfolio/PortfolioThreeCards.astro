@@ -8,7 +8,7 @@ import Button from "@components/Button/Button.astro";
 import PortfolioCard from "@components/PortfolioCard/PortfolioCard.astro";
 import { getCollection } from "astro:content";
 
-const portfolios = await getCollection("concerts");
+const portfolios = await getCollection("shows");
 
 const sortedPortfolios = portfolios.sort((a, b) => {
 	if (a.data.order < b.data.order) {
@@ -31,12 +31,12 @@ const firstThreePortfolios = sortedPortfolios.slice(0, 3);
 	</div>
 	<div class="grid gap-10 pt-8 md:grid-cols-2 md:pt-12">
 		<div class="md:bg-base-100 md:rounded-md md:p-10 md:pb-6">
-			<PortfolioCard concert={firstThreePortfolios[0]} direction="vertical" />
+			<PortfolioCard show={firstThreePortfolios[0]} direction="vertical" />
 		</div>
 		<div class="flex h-full flex-col justify-between gap-y-6">
-			<PortfolioCard concert={firstThreePortfolios[1]} direction="horizontal" />
+			<PortfolioCard show={firstThreePortfolios[1]} direction="horizontal" />
 			<hr class="border-base-100 hidden border md:block" />
-			<PortfolioCard concert={firstThreePortfolios[2]} direction="horizontal" />
+			<PortfolioCard show={firstThreePortfolios[2]} direction="horizontal" />
 		</div>
 	</div>
 

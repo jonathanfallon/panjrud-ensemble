@@ -11,14 +11,14 @@ const today = new Date();
 <footer class="bg-base-100/40 mt-12 flex flex-col items-center justify-center py-8">
 	<div class="site-container">
 		<!-- footer links -->
-		<div
+		<!-- <div
 			class="flex w-full flex-col items-center justify-between gap-2 text-lg md:grid md:grid-cols-5"
 		>
 			<div class="flex justify-center py-2 text-center md:hidden">
 				<SiteLogo />
 			</div>
 			<div class="col-span-2 flex justify-end gap-4">
-				<FooterLink href={import.meta.env.BASE_URL + "/concerts"}>Concerts</FooterLink>
+				<FooterLink href={import.meta.env.BASE_URL + "/shows"}>Shows</FooterLink>
 			</div>
 			<div class="hidden justify-center text-center md:flex">
 				<SiteLogo />
@@ -26,7 +26,7 @@ const today = new Date();
 			<div class="flex gap-4 md:col-span-2">
 				<FooterLink href={import.meta.env.BASE_URL + "/#contact"}>Contact</FooterLink>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- socials -->
 		<div class="text-primary-400 mt-8 flex justify-center gap-4">
@@ -52,12 +52,12 @@ const today = new Date();
 
 		<!-- copyright -->
 		<div class="mt-4 mb-2 text-center text-sm opacity-80">
-			&copy; {today.getFullYear()} a theme by <a
+			&copy; {today.getFullYear()} thanks to <a
 				href="https://cosmicthemes.com"
 				class="hover:text-primary-600 transition"
 				target="_blank"
 				rel="noopener">Cosmic Themes</a
-			>
+			> for the inspiration.
 			<!-- {siteData.name}. All rights reserved. -->
 		</div>
 	</div>
