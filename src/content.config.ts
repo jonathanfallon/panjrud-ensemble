@@ -36,7 +36,22 @@ const otherPages = defineCollection({
 		}),
 });
 
+// musicians
+const musicians = defineCollection({
+	loader: glob({
+		pattern: "**/[^_]*.{md,mdx}",
+		base: "./src/data/musicians",
+	}),
+	schema: () =>
+		z.object({
+			name: z.string(),
+			image: z.string(),
+			draft: z.boolean().optional(),
+		}),
+});
+
 export const collections = {
 	shows,
 	otherPages,
+  musicians,
 };

@@ -50,6 +50,12 @@ const today = new Date();
 			)}
 		</div>
 
+		<!-- footer links -->
+		<div class="flex justify-center gap-6 mt-6">
+			<FooterLink href={import.meta.env.BASE_URL + "/musicians"}>Musicians</FooterLink>
+			<FooterLink href={import.meta.env.BASE_URL + "/#contact"}>Contact</FooterLink>
+		</div>
+
 		<!-- copyright -->
 		<div class="mt-4 mb-2 text-center text-sm opacity-80">
 			&copy; {today.getFullYear()} thanks to <a
