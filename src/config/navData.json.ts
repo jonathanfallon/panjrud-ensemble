@@ -25,6 +25,10 @@ const navConfig: navItem[] = [
 		text: "Musicians",
 		link: "/musicians",
 	},
+	{
+		text: "Media",
+		link: "/media",
+	},
 ];
 
 export default navConfig;

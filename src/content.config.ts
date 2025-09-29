@@ -50,8 +50,23 @@ const musicians = defineCollection({
 		}),
 });
 
+// media
+const media = defineCollection({
+	loader: glob({
+		pattern: "**/[^_]*.{md,mdx}",
+		base: "./src/data/media",
+	}),
+	schema: () =>
+		z.object({
+			title: z.string(),
+			url: z.string(),
+			draft: z.boolean().optional(),
+		}),
+});
+
 export const collections = {
 	shows,
 	otherPages,
-  musicians,
+	musicians,
+	media,
 };
