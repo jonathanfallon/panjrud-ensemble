@@ -2,17 +2,18 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-const media = await getCollection("media");
-const published = media.filter((m) => !m.data.draft);
+const videos = await getCollection("videos");
+const published = videos.filter((m) => !m.data.draft).sort((a, b) => (a.id > b.id ? 1 : -1));
 ---
 
-<BaseLayout title="Media" description="Video media from our performances">
-	<section class="mx-auto max-w-3xl px-4 pt-24 md:pt-36">
-		<h1 class="h1 description text-center">Media</h1>
+<BaseLayout title="Videos" description="Video media from our performances">
+	<section class="mx-auto max-w-3xl px-4 pt-24 md:mt-24">
+		<h1 class="h1 description mb-16 text-center">Videos</h1>
 
-			<div class="grid gap-8">
-						{published.map((m) => (
-							<div class="w-full">
+		<div class="grid gap-8">
+			{
+				published.map((m) => (
+					<div class="w-full">
 						<h3 class="h3">{m.data.title}</h3>
 						{m.body && <div class="prose mt-2" set:html={m.body} />}
 						<div class="mt-4 aspect-video w-full overflow-hidden rounded shadow">
@@ -26,7 +27,8 @@ const published = media.filter((m) => !m.data.draft);
 							/>
 						</div>
 					</div>
-				))}
-			</div>
+				))
+			}
+		</div>
 	</section>
 </BaseLayout>

@@ -22,12 +22,12 @@ const siteData: SiteDataProps = {
 	name: "Panjrud Ensemble",
 	// Your website's title and description (meta fields)
 	title: "Panjrud Ensemble",
-	description: "Five musicians meeting to shape as one expressing their sensibilities to link to the musical traditions from different parts of the Silk Road.",
+	description: "Five musicians at the heart of a new ensemble, channeling their sensibilities to weave together musical traditions of the Silk Road.",
 	useViewTransitions: true,
 	// Your information!
 	author: {
 		name: "Panjrud Ensemble",
-		email: "no-reply@example.com",
+		email: "contact@panjrud-ensemble.com",
 		twitter: "",
 		facebook: "",
 		instagram: "https://www.instagram.com/panjrud_ensemble",

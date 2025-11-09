@@ -50,11 +50,11 @@ const musicians = defineCollection({
 		}),
 });
 
-// media
-const media = defineCollection({
+// videos
+const videos = defineCollection({
 	loader: glob({
 		pattern: "**/[^_]*.{md,mdx}",
-		base: "./src/data/media",
+		base: "./src/data/videos",
 	}),
 	schema: () =>
 		z.object({
@@ -68,5 +68,5 @@ export const collections = {
 	shows,
 	otherPages,
 	musicians,
-	media,
+	videos,
 };

@@ -1,0 +1,27 @@
+---
+import siteData from "@config/siteData.json";
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Infos" description="Practical contact information">
+	<section class="mx-auto max-w-3xl px-4 pt-24 md:mt-24">
+		<h1 class="h1 description text-center">Infos</h1>
+
+		<h2 class="h2 description mt-8 mb-4 text-center">Contact</h2>
+
+		<p>
+			For booking and general inquiries, please contact us at
+			<a href={`mailto:${siteData.author.email}`} class="text-primary-500"
+				>{siteData.author.email}</a
+			>
+		</p>
+	</section>
+
+	<!-- <section class="mx-auto mt-16 max-w-3xl px-4 md:mt-24">
+		<h2 class="h2 description mt-8 mb-4 text-center">Technical informations</h2>
+	</section>
+
+	<section class="mx-auto mt-16 max-w-3xl px-4 md:mt-24">
+		<h2 class="h2 description mt-8 mb-4 text-center">Press kit</h2>
+	</section> -->
+</BaseLayout>

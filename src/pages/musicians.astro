@@ -1,13 +1,13 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 
 const musicians = await getCollection("musicians");
 const published = musicians.filter((m) => !m.data.draft);
 ---
 
 <BaseLayout title="Musicians" description="List of musicians and short bios">
-	<section class="mx-auto max-w-3xl px-4 pt-24 md:pt-36">
+	<section class="mx-auto max-w-3xl px-4 pt-24 md:mt-24">
 		<h1 class="h1 description text-center">Musicians</h1>
 
 		{published.length === 0 && <p class="text-center">No musicians found.</p>}
@@ -21,7 +21,11 @@ const published = musicians.filter((m) => !m.data.draft);
 							class={`grid items-center gap-6 md:grid-cols-2 ${isOdd ? "md:flex-row-reverse" : ""}`}
 						>
 							<div class="flex justify-center">
-                                <img src={`${import.meta.env.BASE_URL}/musicians/${m.data.image}`} alt={m.data.name} class="w-full max-w-md rounded shadow" />
+								<img
+									src={`${import.meta.env.BASE_URL}/musicians/${m.data.image}`}
+									alt={m.data.name}
+									class="w-full max-w-md rounded shadow"
+								/>
 							</div>
 							<div class="prose max-w-none">
 								<h3 class="h3">{m.data.name}</h3>
