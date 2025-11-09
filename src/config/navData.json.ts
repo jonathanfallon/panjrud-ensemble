@@ -19,7 +19,7 @@ const navConfig: navItem[] = [
 	},
 	{
 		text: "Shows",
-		link: "#shows",
+		link: "/#shows",
 	},
 	{
 		text: "Musicians",
