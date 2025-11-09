@@ -6,55 +6,45 @@
 
 import Button from "@components/Button/Button.astro";
 import siteData from "@config/siteData.json";
-import heroImage from "@images/hero-bg-panjrud.jpg";
-import heroImageMobile from "@images/hero-bg-panjrud.jpg";
+import heroImage from "@images/panjrud-ensemble-band.webp";
+import heroImageMobile from "@images/panjrud-ensemble-band.webp";
 import { Image } from "astro:assets";
 ---
 
-<section id="hero" class="relative z-10 flex min-h-[100lvh] w-full">
+<section id="hero" class="relative z-10 flex min-h-lvh w-full">
 	<!-- background image -->
 	<div class="absolute -z-10 h-full min-h-full w-full overflow-hidden">
-		<div class="absolute inset-0 bg-black/10"></div>
+		<div class="absolute inset-0 bg-black/60"></div>
 
 		<Image
 			src={heroImage}
-			class="hidden h-auto min-h-full w-full object-cover object-bottom sm:block"
+			class="hidden h-full w-full object-cover object-center sm:block"
 			alt={siteData.name}
 			aria-hidden="true"
 			loading="eager"
-			height={1400}
 		/>
 		<Image
 			src={heroImageMobile}
-			class="h-auto min-h-full w-full object-cover sm:hidden"
+			class="h-full w-full object-cover object-center sm:hidden"
 			alt={siteData.name}
 			aria-hidden="true"
 			loading="eager"
-			width={1200}
 		/>
 	</div>
 
 	<!-- hero items -->
 	<div class="site-container relative w-full gap-10 py-44 text-center md:py-52 md:text-left">
 		<!-- Hero text -->
-		<div class="text-white my-auto mx-auto max-w-[800px] flex flex-col items-center text-center">
-			<h1 class="font-heading-1 text-4xl uppercase font-light text-pretty tracking-widest md:text-7xl md:leading-tight" >
+		<div
+			class="absolute bottom-[15%] left-1/2 flex max-w-[800px] -translate-x-1/2 flex-col items-center text-center text-white md:bottom-[25%]"
+		>
+			<h1
+				class="font-heading-1 mt-12 text-4xl font-light tracking-widest text-pretty uppercase md:mt-20 md:text-7xl md:leading-tight"
+			>
 				{siteData.name}
 			</h1>
-			<hr class="mx-auto my-6 h-1 w-full rounded-full bg-white/80 md:my-8" aria-hidden="true" />
-			<p class="mt-6 text-lg tracking-widest text-pretty drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:max-w-[550px] md:text-2xl" >
-				{siteData.description}
-			</p>
-			<div class="mt-10 flex flex-wrap justify-center gap-4">
-				<Button
-					variant="ghost"
-					arrow="right"
-					href={`${import.meta.env.BASE_URL}/media`}
-					class="pl-0 text-xl text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:text-3xl"
-				>
-					Discover
-				</Button>
-			</div>
+
+			<p class="mt-8 text-center text-lg text-pretty md:text-xl">{siteData.description}</p>
 		</div>
 	</div>
 </section>

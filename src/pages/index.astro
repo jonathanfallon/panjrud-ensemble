@@ -2,8 +2,8 @@
 import Hero from "@components/Hero/Hero.astro";
 import Shows from "@components/Shows/Shows.astro";
 import siteData from "@config/siteData.json";
-import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 
 const showsCollection = await getCollection("shows");
 // sort by date descending (newest first)
@@ -15,8 +15,28 @@ const showsSorted = showsCollection.sort(
 <BaseLayout title={siteData.title} description={siteData.description} navStartStyle="white">
 	<Hero />
 
+	<section class="site-container py-6">
+		<div class="prose mx-auto max-w-2xl">
+			<h2 class="h3 mt-16 text-center">The Project</h2>
+			<p class="mt-4">
+				Based upon the musical encounters of the French accordionist Adrien Seguy on the Silk Road,
+				PANJRUD ENSEMBLE is a new ensemble formed by Solmaz Badri (Iran), Sadriddin Gulov
+				(Uzbekistan), Tigran Davtyan (Armenia), Adrien Seguy (France) and Samuel Wornom (France).
+			</p>
+			<p class="mt-4">
+				From the Pamir mountains flow five rivers. As they meet in the Tajik region of Panjrud, they
+				give birth to the great Amu Darya, the mother of rivers in Central Asia. Panj means five in
+				Persian, rud means river or instrument.
+			</p>
+			<p class="mt-4">
+				Five musicians at the heart of a new ensemble, channeling their sensibilities to weave
+				together musical traditions of the Silk Road.
+			</p>
+		</div>
+	</section>
+
 	<section class="site-container" id="media">
-		<h3 class="h3 mt-8 text-center">Teaser</h3>
+		<h3 class="h3 mt-16 text-center">Teaser</h3>
 		<div class="mt-4 aspect-video w-full overflow-hidden rounded shadow">
 			<iframe
 				src="https://www.youtube.com/embed/qzlStvyMxFA?rel=0"
@@ -28,7 +48,7 @@ const showsSorted = showsCollection.sort(
 	</section>
 
 	<section class="site-container" id="shows">
-		<h3 class="h3 mt-8 text-center">Shows</h3>
+		<h3 class="h3 mt-16 text-center">Shows</h3>
 		<Shows shows={showsSorted} />
 	</section>
 </BaseLayout>
