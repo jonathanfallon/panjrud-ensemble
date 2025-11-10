@@ -1,27 +1,106 @@
 ---
 import siteData from "@config/siteData.json";
+import presskitCoverEn from "@images/presskit-cover_en.webp";
+import presskitCoverFr from "@images/presskit-cover_fr.webp";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout title="Infos" description="Practical contact information">
 	<section class="mx-auto max-w-3xl px-4 pt-24 md:mt-24">
 		<h1 class="h1 description text-center">Infos</h1>
 
-		<h2 class="h2 description mt-8 mb-4 text-center">Contact</h2>
+		<h2 class="h2 description sr-only mt-8 mb-4 text-center">Contact information</h2>
 
-		<p>
-			For booking and general inquiries, please contact us at
-			<a href={`mailto:${siteData.author.email}`} class="text-primary-500"
-				>{siteData.author.email}</a
-			>
+		<p class="mt-8 text-center">
+			For booking and general inquiries, please contact us at <br />
+			<a href={`mailto:${siteData.author.email}`} class="text-primary-500">
+				{siteData.author.email}
+			</a>
 		</p>
 	</section>
 
 	<!-- <section class="mx-auto mt-16 max-w-3xl px-4 md:mt-24">
 		<h2 class="h2 description mt-8 mb-4 text-center">Technical informations</h2>
-	</section>
+	</section> -->
 
 	<section class="mx-auto mt-16 max-w-3xl px-4 md:mt-24">
-		<h2 class="h2 description mt-8 mb-4 text-center">Press kit</h2>
-	</section> -->
+		<h2 class="h2 description sr-only mt-8 mb-4 text-center">Press kit</h2>
+
+		<article class="py-10">
+			<div class={`grid items-center gap-6 md:grid-cols-2 md:flex-row-reverse`}>
+				<div class="flex justify-center">
+					<Image
+						src={presskitCoverEn}
+						alt="Dossier de Presse Panjrud Ensemble"
+						width={640}
+						densities={[1.5, 2]}
+						class="hidden w-full max-w-md rounded shadow md:block"
+					/>
+				</div>
+
+				<!-- English Presskit -->
+				<div class="prose max-w-none">
+					<h3 class="h3 text-primary-700">Presskit</h3>
+					<p class="mt-4">
+						Download our press kit in English, containing information about the group, musician
+						biographies, photos, and past concerts.
+					</p>
+					<p class="mt-16">
+						<a
+							href={import.meta.env.BASE_URL + `/presskit/panjrud-ensemble_presskit_en.pdf`}
+							class="border-primary-600 text-primary-700 hover:bg-primary-100 inline-block w-full rounded-md border-2 px-2 py-4 text-center font-semibold"
+						>
+							Low resolution (PDF 1,0Mo)
+						</a>
+					</p>
+					<p class="mt-4">
+						<a
+							href={import.meta.env.BASE_URL + `/presskit/panjrud-ensemble_presskit_full_en.pdf`}
+							class="border-primary-600 text-primary-700 hover:bg-primary-100 inline-block w-full rounded-md border-2 px-2 py-4 text-center font-semibold"
+						>
+							High resolution (PDF 29,5Mo)
+						</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="mt-16 grid items-center gap-6 md:grid-cols-2 md:flex-row-reverse">
+				<!-- French dossier de presse -->
+				<div class="prose max-w-none">
+					<h3 class="h3 text-primary-700">Dossier de Presse</h3>
+					<p class="mt-4">
+						Téléchargez notre dossier de presse en français, contenant des informations sur le
+						groupe, des biographies des musiciens, des photos et les concerts passés.
+					</p>
+					<p class="mt-16">
+						<a
+							href={import.meta.env.BASE_URL + `/presskit/panjrud-ensemble_presskit_fr.pdf`}
+							class="border-primary-600 text-primary-700 hover:bg-primary-100 inline-block w-full rounded-md border-2 px-2 py-4 text-center font-semibold"
+						>
+							Télécharger le dossier<br />basse résolution (PDF 1,0Mo)
+						</a>
+					</p>
+					<p class="mt-4">
+						<a
+							href={import.meta.env.BASE_URL + `/presskit/panjrud-ensemble_presskit_full_fr.pdf`}
+							class="border-primary-600 text-primary-700 hover:bg-primary-100 inline-block w-full rounded-md border-2 px-2 py-4 text-center font-semibold"
+						>
+							Télécharger le dossier<br />haute résolution (PDF 29,5Mo)
+						</a>
+					</p>
+				</div>
+
+				<div class="flex justify-center">
+					<Image
+						src={presskitCoverFr}
+						alt="Dossier de Presse Panjrud Ensemble"
+						width={640}
+						densities={[1.5, 2]}
+						class="hidden w-full max-w-md rounded shadow md:block"
+					/>
+				</div>
+			</div>
+		</article>
+	</section>
 </BaseLayout>
