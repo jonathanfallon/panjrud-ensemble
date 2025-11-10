@@ -24,7 +24,7 @@ const { title, description, heroImage } = show.data;
 		},
 	]}
 >
-	<a href={`${import.meta.env.BASE_URL}/shows/${show.id}`} class="aspect-square overflow-hidden">
+	<a href={`/shows/${show.id}`} class="aspect-square overflow-hidden">
 		{
 			noTransitions && (
 				<Image
@@ -55,7 +55,7 @@ const { title, description, heroImage } = show.data;
 			<p class="mt-4 lg:text-lg">{description}</p>
 		</div>
 		<div class="flex">
-			<Button variant="ghost" arrow="right" href={`${import.meta.env.BASE_URL}/shows/${show.id}`} class="pl-0">
+			<Button variant="ghost" arrow="right" href={`/shows/${show.id}`} class="pl-0">
 				View More
 			</Button>
 		</div>

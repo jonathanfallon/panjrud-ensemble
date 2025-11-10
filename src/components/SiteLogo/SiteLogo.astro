@@ -4,14 +4,14 @@ import logo from "@images/logo-panjrud.svg";
 import { Image } from "astro:assets";
 ---
 
-<a class="primary-focus flex items-center align-middle" href={import.meta.env.BASE_URL} aria-label="Home" class="">
+<a class="primary-focus flex items-center align-middle" href="/" aria-label="Home" class="">
 	<Image
-    src={logo}
-    alt={siteData.name}
-    loading="eager"
-    width={100}
-    height={100}
-    class="h-14 w-14"
-  />
+		src={logo}
+		alt={siteData.name}
+		loading="eager"
+		width={100}
+		height={100}
+		class="h-14 w-14"
+	/>
 	<!-- <div class="font-heading-1 text-xl uppercase">{siteData.name}</div> -->
 </a>
