@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /
-Sitemap: https://jonathanfallon.github.io/panjrud-ensemble/sitemap-index.xml
+Sitemap: https://panjrud-ensemble.com/sitemap-index.xml
