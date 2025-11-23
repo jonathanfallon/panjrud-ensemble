@@ -13,7 +13,8 @@ const shows = defineCollection({
 		z.object({
 			title: z.string(),
 			description: z.string(),
-				location: z.string(),
+					location: z.string(),
+					url: z.string().optional(),
 			// Transform string to Date object
 			date: z.coerce.date(),
 			// will be excluded from build if draft is "true"

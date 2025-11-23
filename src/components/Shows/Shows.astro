@@ -2,63 +2,57 @@
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  shows: CollectionEntry<"shows">[];
+	shows: CollectionEntry<"shows">[];
 }
 
 const { shows = [] } = Astro.props as Props;
 
 function formatDate(d: string | Date) {
-  try {
-    const dt = new Date(d);
-    return dt.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
-  } catch (e) {
-    return String(d);
-  }
+	try {
+		const dt = new Date(d);
+		return dt.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+	} catch (e) {
+		return String(d);
+	}
 }
 ---
 
 <div class="w-full overflow-x-auto">
-  <table class="w-full min-w-[560px] table-auto text-left">
-    <thead>
-      <tr class="border-b border-white/10 text-sm uppercase tracking-wider text-white/70">
-        <th class="px-4 py-3">Date</th>
-        <th class="px-4 py-3">Location</th>
-        <th class="px-4 py-3 text-right">Ticket / Link</th>
-      </tr>
-    </thead>
-    <tbody class="divide-y divide-white/5">
-      {shows.map((entry) => {
-        const show = entry.data;
-        // link could be stored in frontmatter; using empty for now
-        const link = (show as any).link ?? "";
-        return (
-          <tr class="hover:bg-white/2">
-            <td class="px-4 py-4 align-top text-base">{formatDate(show.date)}</td>
-            <td class="px-4 py-4 align-top text-base">{show.location}</td>
-            <td class="px-4 py-4 align-top text-base text-right">
-              {link ? (
-                <a
-                  class="inline-block rounded-md bg-white/5 px-4 py-2 text-sm text-white transition-colors hover:bg-white/10"
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View / Tickets
-                </a>
-              ) : (
-                <span class="text-white/50">—</span>
-              )}
-            </td>
-          </tr>
-        );
-      })}
-      {shows.length === 0 && (
-        <tr>
-          <td class="px-4 py-6 text-center text-white/60" colspan={3}>
-            No shows available
-          </td>
-        </tr>
-      )}
-    </tbody>
-  </table>
+	<table class="w-full min-w-[560px] table-auto text-left">
+		<thead>
+			<tr class="border-b border-white/10 text-sm tracking-wider text-white/70 uppercase">
+				<th class="px-4 py-3">Date</th>
+				<th class="px-4 py-3">Location</th>
+				<th class="px-4 py-3 text-right">Ticket / Link</th>
+			</tr>
+		</thead>
+		<tbody class="divide-y divide-white/5">
+			{
+				shows.map((entry) => {
+					const show = entry.data;
+					const link = (show as any).url ?? "";
+					return (
+						<tr class="hover:bg-white/2">
+							<td class="px-4 py-4 align-top text-base">{formatDate(show.date)}</td>
+							<td class="px-4 py-4 align-top text-base">{show.title}</td>
+							<td class="px-4 py-4 text-right align-top text-base">
+								{link ? (
+									<a
+										class="inline-block rounded-md bg-white/5 px-4 py-2 text-sm text-white transition-colors hover:bg-white/10"
+										href={link}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										View / Tickets
+									</a>
+								) : (
+									<span class="text-white/50">—</span>
+								)}
+							</td>
+						</tr>
+					);
+				})
+			}
+		</tbody>
+	</table>
 </div>
