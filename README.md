@@ -12,6 +12,8 @@ Le contenu des fichiers est écrit en Markdown. https://www.markdownguide.org/ch
 
 #### Ajouter un concert
 
+https://github.com/jonathanfallon/panjrud-ensemble/tree/main/src/data/shows
+
 1. Ouvrir un fichier existant et copier son contenu dans `src/data/shows/`.
 2. Créer un nouveau fichier avec le nom de la date et du lieu du concert, par exemple `2024-12-31-paris.md`.
 3. Coller le contenu copié dans le nouveau fichier.
@@ -20,11 +22,26 @@ Le contenu des fichiers est écrit en Markdown. https://www.markdownguide.org/ch
 
 #### Modifier un musicien
 
+https://github.com/jonathanfallon/panjrud-ensemble/tree/main/src/data/musicians
+
 - Editer le fichier correspondant dans `src/data/musicians/`.
 - Changer le numéro dans le nom du fichier pour changer l'ordre d'affichage (croissant).
 - Remplacer l'image du musicien dans `public/images/musicians/` en conservant le même nom de fichier.
 
 Les portraits des musiciens font 356x465 pixels.
+
+#### Modifier ou ajouter une vidéo
+
+https://github.com/jonathanfallon/panjrud-ensemble/tree/main/src/data/videos
+
+1. Ouvrir un fichier existant et copier son contenu dans `src/data/videos/`.
+2. Créer un nouveau fichier avec un nom descriptif, par exemple `05_concert-at-museum.md`.
+3. Coller le contenu copié dans le nouveau fichier.
+4. Mettre à jour les métadonnées en haut du fichier (titre, url).
+
+#### Modifier la page projet
+
+https://github.com/jonathanfallon/panjrud-ensemble/blob/main/src/data/pages/project.md
 
 ## Credits and License
 
