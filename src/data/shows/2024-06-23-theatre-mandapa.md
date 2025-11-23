@@ -1,7 +1,7 @@
 ---
-title: "Théâtre Mandapa, Paris"
+title: "Paris, Théâtre Mandapa — FR"
 description: "Performance at Théâtre Mandapa"
-location: "Théâtre Mandapa, Paris"
+location: "Paris, Théâtre Mandapa — FR"
 date: 2024-06-23
 draft: false
 ---
