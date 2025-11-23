@@ -1,7 +1,7 @@
 ---
-title: "Église de Termes (11)"
+title: "Termes, Église — FR"
 description: "Performance at Église de Termes"
-location: "Église de Termes (11)"
+location: "Termes, Église — FR"
 date: 2024-06-28
 draft: false
 ---
