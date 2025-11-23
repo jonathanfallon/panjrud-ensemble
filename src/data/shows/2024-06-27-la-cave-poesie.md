@@ -1,7 +1,7 @@
 ---
-title: "La Cave Poésie, Toulouse"
+title: "Toulouse, La Cave Poésie — FR"
 description: "Performance at La Cave Poésie"
-location: "La Cave Poésie, Toulouse"
+location: "Toulouse, La Cave Poésie — FR"
 date: 2024-06-27
 draft: false
 ---
