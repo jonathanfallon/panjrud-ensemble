@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 const musicians = await getCollection("musicians");
 const published = musicians.filter((m) => !m.data.draft).sort((a, b) => (a.id > b.id ? 1 : -1));
@@ -13,8 +13,9 @@ const published = musicians.filter((m) => !m.data.draft).sort((a, b) => (a.id > 
 		{published.length === 0 && <p class="text-center">No musicians found.</p>}
 
 		{
-			published.map((m, i) => {
+			published.map(async (m, i) => {
 				const isOdd = i % 2 === 1;
+				const { Content } = await render(m);
 				return (
 					<article class="py-10">
 						<div
@@ -29,7 +30,9 @@ const published = musicians.filter((m) => !m.data.draft).sort((a, b) => (a.id > 
 							</div>
 							<div class="prose max-w-none">
 								<h3 class="h3">{m.data.name}</h3>
-								{m.body && <div class="mt-4" set:html={m.body} />}
+								<div class="markdown-content">
+									<Content />
+								</div>
 							</div>
 						</div>
 					</article>
