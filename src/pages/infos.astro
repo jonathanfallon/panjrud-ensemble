@@ -10,8 +10,6 @@ import { Image } from "astro:assets";
 	<section class="mx-auto max-w-3xl px-4 pt-24 md:mt-24">
 		<h1 class="h1 description text-center">Infos</h1>
 
-		<h2 class="h2 description sr-only mt-8 mb-4 text-center">Contact information</h2>
-
 		<p class="mt-8 text-center">
 			For booking and general inquiries, please contact us at <br />
 			<a href={`mailto:${siteData.author.email}`} class="text-primary-500">
@@ -20,12 +18,40 @@ import { Image } from "astro:assets";
 		</p>
 	</section>
 
-	<!-- <section class="mx-auto mt-16 max-w-3xl px-4 md:mt-24">
-		<h2 class="h2 description mt-8 mb-4 text-center">Technical informations</h2>
-	</section> -->
+	<section class="mx-auto mt-16 max-w-3xl px-4 md:mt-24">
+		<!-- <h1 class="h1 description text-center">Technical information</h1> -->
+
+		<div class="mt-8 grid gap-6 md:grid-cols-2">
+			<article class="prose max-w-none">
+				<h3 class="h3 text-primary-700">Technical rider</h3>
+				<p class="mt-2">Download our technical rider in English (PDF).</p>
+				<p class="mt-4">
+					<a
+						href="/rider/panjrud-ensemble_technical-rider.pdf"
+						class="border-primary-600 text-primary-700 hover:bg-primary-100 inline-block w-full rounded-md border-2 px-4 py-3 text-center font-semibold"
+					>
+						Download PDF
+					</a>
+				</p>
+			</article>
+
+			<article class="prose max-w-none">
+				<h3 class="h3 text-primary-700">Fiche technique</h3>
+				<p class="mt-2">Téléchargez notre fiche technique en français (PDF).</p>
+				<p class="mt-4">
+					<a
+						href="/rider/panjrud-ensemble_fiche-technique.pdf"
+						class="border-primary-600 text-primary-700 hover:bg-primary-100 inline-block w-full rounded-md border-2 px-4 py-3 text-center font-semibold"
+					>
+						Télécharger le PDF
+					</a>
+				</p>
+			</article>
+		</div>
+	</section>
 
 	<section class="mx-auto mt-16 max-w-3xl px-4 md:mt-24">
-		<h2 class="h2 description sr-only mt-8 mb-4 text-center">Press kit</h2>
+		<h1 class="h1 description text-center">Press kit</h1>
 
 		<article class="py-10">
 			<div class={`grid items-center gap-6 md:grid-cols-2 md:flex-row-reverse`}>
