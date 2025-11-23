@@ -1,3 +1,4 @@
+import { slugify } from "@js/textUtils";
 import { glob } from "astro/loaders";
 import { defineCollection, reference, z } from "astro:content";
 
@@ -27,10 +28,11 @@ const otherPages = defineCollection({
 	// type: "content",
 	loader: glob({
 		pattern: "**/[^_]*.{md,mdx}",
-		base: "./src/data/otherPages",
+		base: "./src/data/pages",
 	}),
 	schema: () =>
 		z.object({
+			slug: z.string(),
 			title: z.string(),
 			description: z.string(),
 			draft: z.boolean().optional(),
