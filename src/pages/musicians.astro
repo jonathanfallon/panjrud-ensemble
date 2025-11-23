@@ -3,9 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 const musicians = await getCollection("musicians");
-const published = musicians
-	.filter((m) => !m.data.draft)
-	.sort((a, b) => (a.data.name > b.data.name ? 1 : -1));
+const published = musicians.filter((m) => !m.data.draft).sort((a, b) => (a.id > b.id ? 1 : -1));
 ---
 
 <BaseLayout title="Musicians" description="List of musicians and short bios">
