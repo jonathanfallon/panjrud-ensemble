@@ -1,7 +1,7 @@
 ---
-title: "Maison Éclusière de Parcieux, Lyon"
+title: "Lyon, Maison Éclusière de Parcieux"
 description: "Performance at Maison Éclusière de Parcieux"
-location: "Maison Éclusière de Parcieux, Lyon"
+location: "Lyon, Maison Éclusière de Parcieux"
 date: 2024-06-29
 draft: false
 ---
